@@ -10,11 +10,9 @@ function Menu({ active, setActive, handleDelete, children }) {
     return (
         <div className="menu">
             <button onClick={() => setActive(true)}>Добавить</button>
-            <Modal active={active} setActive={setActive}>
                 <Modal active={active} setActive={setActive}>
                     {children}
                 </Modal>
-            </Modal>
             <button onClick={deleteActive}>Удалить</button>
         </div>
     )
