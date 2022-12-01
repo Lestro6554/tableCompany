@@ -1,0 +1,41 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.table__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    height: 26px;
+}
+
+.table__row--header {
+    font-weight: bold;
+}
+
+.table__cell {
+    border: 1px solid rgb(36, 59, 43);
+    width: 200px;
+}
+
+.table__cell input {
+    border: none;
+}
+
+.table__cell input:focus {
+    outline: none;
+}
+
+.item_active {
+    background: #01af4948;
+}
+
+input.item_active {
+    background: #00000000;
+}
