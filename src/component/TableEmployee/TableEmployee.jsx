@@ -34,8 +34,8 @@ export default function TableEmployee({idCompany}) {
   const handleDelete = () => {
     if(emplChecked.length > 0) {
       emplChecked.forEach(async (element) => {
-        await deleteEmpl(element.id);
         removeEmployeeChecked(element);
+        await deleteEmpl(element.id);
       });
     }
   }

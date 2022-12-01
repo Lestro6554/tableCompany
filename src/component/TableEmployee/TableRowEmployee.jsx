@@ -59,20 +59,17 @@ export default function TableRow({content, isAllActive, allCheckbox, handleUpdat
                 secondName: debSecondName,
                 position: debPosition
             }));
-        }
-    }, [debFirstName, debSecondName, debPosition, stateContent]);
 
-    useEffect(() => {
-        const newContent = {
-            ...stateContent,
-            firstName: debFirstName,
-            secondName: debSecondName,
-            position: debPosition
-        };
+            const newContent = {
+                ...stateContent,
+                firstName: debFirstName,
+                secondName: debSecondName,
+                position: debPosition
+            };
         
-        handleUpdate(newContent);
-
-    }, [stateContent, handleUpdate]);
+            handleUpdate(newContent);
+        }
+    }, [debFirstName, debSecondName, debPosition, stateContent, handleUpdate]);
 
     return (
         <div className="table__row">

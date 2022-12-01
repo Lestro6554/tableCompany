@@ -37,8 +37,8 @@ export default function TableCompany() {
   const handleDelete = () => {
     if(companyChecked.length > 0) {
       companyChecked.forEach(async (element) => {
-        await deleteCompany(element);
         removeCompanyChecked(element);
+        await deleteCompany(element);
         const filterEmpl = dataEmpl.filter(i => i.idCompany === element.id);
         if(filterEmpl.length > 0) {
           filterEmpl.forEach(async (empl) => {
